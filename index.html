@@ -4,43 +4,43 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Priti's Exclusive Date Reservation ❤️</title>
+<title>Priti ❤️ Rohit | Date Reservation</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Great+Vibes&display=swap" rel="stylesheet">
 
 <style>
-
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
 }
 
 body{
+    font-family:'Poppins',sans-serif;
     min-height:100vh;
-    background:linear-gradient(135deg,#ff758c,#ff7eb3,#ffc3a0);
+    background:linear-gradient(135deg,#ff758c,#ff7eb3,#ffd1dc);
     display:flex;
     justify-content:center;
     align-items:center;
-    overflow:hidden;
-    padding:20px;
+    padding:16px;
+    overflow-x:hidden;
+    position:relative;
 }
 
 .hearts{
     position:fixed;
-    width:100%;
-    height:100%;
+    inset:0;
     pointer-events:none;
 }
 
 .heart{
     position:absolute;
     color:white;
-    animation:floatUp 8s linear forwards;
+    animation:float 8s linear forwards;
+    opacity:.8;
 }
 
-@keyframes floatUp{
+@keyframes float{
     from{
         transform:translateY(100vh);
         opacity:0;
@@ -49,43 +49,59 @@ body{
         opacity:1;
     }
     to{
-        transform:translateY(-120px);
+        transform:translateY(-150px);
         opacity:0;
     }
 }
 
 .card{
     width:100%;
-    max-width:700px;
-    background:rgba(255,255,255,0.18);
+    max-width:500px;
+    background:rgba(255,255,255,.18);
     backdrop-filter:blur(18px);
-    border-radius:30px;
-    padding:40px;
-    text-align:center;
-    box-shadow:0 20px 50px rgba(0,0,0,0.15);
+    border-radius:28px;
+    padding:28px;
+    box-shadow:0 20px 40px rgba(0,0,0,.12);
     color:white;
+    text-align:center;
 }
 
-h1{
-    font-size:2.8rem;
+.brand{
+    font-family:'Great Vibes',cursive;
+    font-size:3rem;
     margin-bottom:10px;
 }
 
-.subtitle{
-    font-size:1.1rem;
-    margin-bottom:25px;
+.badge{
+    display:inline-block;
+    padding:8px 16px;
+    border-radius:30px;
+    background:rgba(255,255,255,.2);
+    margin-bottom:20px;
+    font-size:.9rem;
 }
 
-.love-note{
-    background:rgba(255,255,255,0.15);
-    padding:20px;
+h1{
+    font-size:2rem;
+    margin-bottom:15px;
+}
+
+.message{
+    background:rgba(255,255,255,.15);
     border-radius:20px;
-    margin-bottom:25px;
+    padding:22px;
+    text-align:left;
     line-height:1.8;
+    margin-bottom:22px;
+    font-size:.95rem;
+}
+
+.message p{
+    margin-bottom:12px;
 }
 
 .form-group{
-    margin:20px 0;
+    margin-bottom:18px;
     text-align:left;
 }
 
@@ -99,20 +115,19 @@ input,select{
     width:100%;
     padding:14px;
     border:none;
-    border-radius:12px;
+    border-radius:14px;
     font-size:16px;
 }
 
 button{
     width:100%;
-    margin-top:25px;
-    padding:16px;
     border:none;
+    padding:16px;
     border-radius:50px;
     background:white;
-    color:#ff4f81;
-    font-size:18px;
+    color:#ff4d88;
     font-weight:700;
+    font-size:1rem;
     cursor:pointer;
     transition:.3s;
 }
@@ -125,44 +140,44 @@ button:hover{
     display:none;
 }
 
-.confirmation-card{
-    text-align:center;
-}
-
-.confirmation-card h2{
-    font-size:2.5rem;
+.confirm-title{
+    font-size:2rem;
     margin-bottom:15px;
 }
 
-.confirmation-card p{
-    font-size:1.15rem;
-    margin:10px 0;
-}
-
-.date-details{
-    background:rgba(255,255,255,0.15);
-    border-radius:20px;
+.booking-card{
+    background:rgba(255,255,255,.15);
     padding:20px;
-    margin-top:20px;
+    border-radius:18px;
+    margin:20px 0;
 }
 
 .signature{
-    margin-top:30px;
-    font-size:1.2rem;
+    margin-top:20px;
+    font-size:1.1rem;
     font-weight:600;
 }
 
-@media(max-width:600px){
+.footer{
+    margin-top:20px;
+    font-size:.85rem;
+    opacity:.9;
+}
+
+@media(max-width:480px){
+
+    .brand{
+        font-size:2.5rem;
+    }
 
     h1{
-        font-size:2rem;
+        font-size:1.6rem;
     }
 
     .card{
-        padding:25px;
+        padding:22px;
     }
 }
-
 </style>
 </head>
 
@@ -170,35 +185,63 @@ button:hover{
 
 <div class="hearts" id="hearts"></div>
 
-<div class="card" id="bookingCard">
+<div class="card" id="bookingPage">
 
-    <h1>❤️ Dear Priti ❤️</h1>
+    <div class="brand">Priti ❤️ Rohit</div>
 
-    <p class="subtitle">
-        You have received an exclusive invitation from Rohit.
-    </p>
+    <div class="badge">
+        Exclusive Reservation Portal
+    </div>
 
-    <div class="love-note">
-        Life gets busy, meetings happen, deadlines come and go...
-        but spending time with you is always my favorite plan.
-        <br><br>
-        Please choose a date that works for you and officially
-        book our next adventure together. ✨
+    <h1>For The Most Beautiful Girl ✨</h1>
+
+    <div class="message">
+
+        <p>
+            Dear Priti,
+        </p>
+
+        <p>
+            Out of all the beautiful things life has given me,
+            getting to know you has been my favorite.
+        </p>
+
+        <p>
+            Your smile somehow makes ordinary days feel special,
+            your voice makes long days feel shorter,
+            and spending time with you is still my favorite part of any week.
+        </p>
+
+        <p>
+            So instead of making plans for you,
+            I thought I'd let the most beautiful girl choose the day herself. ❤️
+        </p>
+
+        <p>
+            Whenever you're free, I'd love to take you out,
+            laugh with you, make memories with you,
+            and steal a few more moments with the person who makes my world brighter.
+        </p>
+
+        <p>
+            Please choose a date below and officially reserve some time for us. 🌹
+        </p>
+
     </div>
 
     <div class="form-group">
-        <label>Select Your Preferred Date 📅</label>
+        <label>Choose Your Date 📅</label>
         <input type="date" id="date">
     </div>
 
     <div class="form-group">
-        <label>Select Time ⏰</label>
-        <select id="time">
-            <option>Lunch Date 🌮</option>
-            <option>Evening Coffee ☕</option>
-            <option>Dinner Date 🍽️</option>
+        <label>Choose The Mood ❤️</label>
+        <select id="plan">
+            <option>Romantic Dinner 🍷</option>
+            <option>Coffee & Endless Conversations ☕</option>
             <option>Movie Night 🎬</option>
-            <option>Surprise Me ❤️</option>
+            <option>Long Drive 🚗</option>
+            <option>Surprise Me 🌹</option>
         </select>
     </div>
 
@@ -206,53 +249,60 @@ button:hover{
         Reserve Our Date ❤️
     </button>
 
+    <div class="footer">
+        Powered by Love, Patience & A Little Courage 😌
+    </div>
+
 </div>
 
 <div class="card" id="confirmation">
 
-    <div class="confirmation-card">
+    <div class="brand">Priti ❤️ Rohit</div>
 
-        <h2>🎉 Reservation Confirmed 🎉</h2>
+    <div class="confirm-title">
+        🎉 Reservation Confirmed 🎉
+    </div>
 
-        <p>
-            Priti has officially booked a date with Rohit ❤️
-        </p>
+    <p>
+        The beautiful Priti has officially reserved time for Rohit ❤️
+    </p>
 
-        <div class="date-details">
-            <p><strong>Date:</strong> <span id="selectedDate"></span></p>
-            <p><strong>Plan:</strong> <span id="selectedTime"></span></p>
-        </div>
+    <div class="booking-card">
+        <p><strong>Date:</strong> <span id="selectedDate"></span></p>
+        <p><strong>Plan:</strong> <span id="selectedPlan"></span></p>
+    </div>
 
-        <p style="margin-top:25px;">
-            I can't wait to spend this special day with you.
-        </p>
+    <p>
+        Thank you for choosing us.
+        Your presence is requested, appreciated,
+        and very much looked forward to. 🌹
+    </p>
 
-        <div class="signature">
-            With Love,<br>
-            Rohit ❤️
-        </div>
+    <p style="margin-top:15px;">
+        Counting down the days until I get to see that beautiful smile again.
+    </p>
 
+    <div class="signature">
+        With Love,<br>
+        Rohit ❤️
     </div>
 
 </div>
 
 <script>
 
-// Prevent past dates
 const today = new Date().toISOString().split('T')[0];
-document.getElementById('date').setAttribute('min', today);
+document.getElementById('date').min = today;
 
-// Floating hearts
 function createHeart(){
 
-    const heart = document.createElement('div');
+    const heart=document.createElement('div');
 
-    heart.classList.add('heart');
+    heart.className='heart';
+    heart.innerHTML='❤️';
 
-    heart.innerHTML = '❤️';
-
-    heart.style.left = Math.random()*100 + 'vw';
-    heart.style.fontSize = (20 + Math.random()*25) + 'px';
+    heart.style.left=Math.random()*100+'vw';
+    heart.style.fontSize=(20+Math.random()*25)+'px';
 
     document.getElementById('hearts').appendChild(heart);
 
@@ -261,43 +311,42 @@ function createHeart(){
     },8000);
 }
 
-setInterval(createHeart,400);
+setInterval(createHeart,350);
 
-// Book Date
 function bookDate(){
 
-    const date = document.getElementById('date').value;
-    const time = document.getElementById('time').value;
+    const date=document.getElementById('date').value;
+    const plan=document.getElementById('plan').value;
 
     if(!date){
-        alert("Priti, please choose a date ❤️");
+        alert("Beautiful Priti, please choose a date first ❤️");
         return;
     }
 
-    document.getElementById('selectedDate').innerText = date;
-    document.getElementById('selectedTime').innerText = time;
+    document.getElementById('selectedDate').innerText =
+        new Date(date).toLocaleDateString('en-IN',{
+            weekday:'long',
+            day:'numeric',
+            month:'long',
+            year:'numeric'
+        });
 
-    document.getElementById('bookingCard').style.display='none';
+    document.getElementById('selectedPlan').innerText = plan;
+
+    document.getElementById('bookingPage').style.display='none';
     document.getElementById('confirmation').style.display='block';
 
-    createConfetti();
-}
-
-// Confetti
-function createConfetti(){
-
-    for(let i=0;i<150;i++){
+    for(let i=0;i<120;i++){
 
         const confetti=document.createElement('div');
 
         confetti.style.position='fixed';
         confetti.style.left=Math.random()*100+'vw';
         confetti.style.top='-20px';
-        confetti.style.width='10px';
-        confetti.style.height='10px';
+        confetti.style.width='8px';
+        confetti.style.height='8px';
         confetti.style.background='white';
         confetti.style.opacity='0.8';
-        confetti.style.transform='rotate(45deg)';
         confetti.style.transition='all 4s linear';
 
         document.body.appendChild(confetti);
