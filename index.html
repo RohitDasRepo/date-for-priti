@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,7 +22,8 @@ body{
     display:flex;
     justify-content:center;
     align-items:center;
-    overflow:hidden;
+    overflow-x:hidden;
+    overflow-y:auto;
     padding:20px;
 }
 
@@ -154,12 +154,49 @@ button:hover{
 
 @media(max-width:600px){
 
+    body{
+        align-items:flex-start;
+        padding:15px;
+        overflow-y:auto;
+    }
+
+    .card{
+        width:100%;
+        padding:25px 20px;
+        margin:10px 0;
+    }
+
     h1{
         font-size:2rem;
     }
 
-    .card{
-        padding:25px;
+    .subtitle{
+        font-size:0.95rem;
+    }
+
+    .love-note{
+        font-size:0.9rem;
+        line-height:1.6;
+        padding:16px;
+    }
+
+    .form-group{
+        margin:18px 0;
+    }
+
+    input,
+    select{
+        width:100%;
+        min-height:50px;
+        font-size:16px;
+    }
+
+    button{
+        min-height:54px;
+        margin-top:20px;
+        font-size:17px;
+        position:relative;
+        z-index:10;
     }
 }
 
@@ -201,7 +238,7 @@ button:hover{
         </select>
     </div>
 
-    <button onclick="bookDate()">
+    <button type="button" onclick="bookDate()">
         Reserve Our Date ❤️
     </button>
 
@@ -283,7 +320,7 @@ function bookDate(){
     });
 
     // Rohit's WhatsApp number
-    const whatsappNumber = "+918789297179";
+    const whatsappNumber = "918789297179";
 
     // WhatsApp message
     const message =
@@ -345,4 +382,3 @@ function createConfetti(){
 
 </body>
 </html>
-```
