@@ -273,13 +273,43 @@ function bookDate(){
         return;
     }
 
-    document.getElementById('selectedDate').innerText = date;
+    // Format date nicely
+    const selectedDateObj = new Date(date + 'T00:00:00');
+
+    const formattedDate = selectedDateObj.toLocaleDateString('en-IN', {
+        day: '2-digit',
+        month: 'long',
+        year: 'numeric'
+    });
+
+    // Rohit's WhatsApp number
+    const whatsappNumber = "918789297179";
+
+    // WhatsApp message
+    const message =
+        `❤️ Date Reservation ❤️\n\n` +
+        `Priti has booked a date with Rohit! 🎉\n\n` +
+        `📅 Date: ${formattedDate}\n` +
+        `💕 Date Type: ${time}\n\n` +
+        `Can't wait for our special day! ❤️`;
+
+    // WhatsApp URL
+    const whatsappURL =
+        `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+
+    // Show confirmation
+    document.getElementById('selectedDate').innerText = formattedDate;
     document.getElementById('selectedTime').innerText = time;
 
-    document.getElementById('bookingCard').style.display='none';
-    document.getElementById('confirmation').style.display='block';
+    document.getElementById('bookingCard').style.display = 'none';
+    document.getElementById('confirmation').style.display = 'block';
 
     createConfetti();
+
+    // Open WhatsApp
+    setTimeout(() => {
+        window.open(whatsappURL, '_blank');
+    }, 1000);
 }
 
 // Confetti
